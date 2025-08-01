@@ -21,3 +21,7 @@
 1 с\
 Ограничение памяти\
 64 МБ
+
+### Ссылки
+
+[itertools](https://docs.python.org/3/library/itertools.html)

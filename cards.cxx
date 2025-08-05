@@ -24,3 +24,15 @@ void generateCombinations(const vector<int>& cards, int start, int k,
         current.pop_back();
     }
 }
+
+int main() {
+    // Создаем вектор всех карт в колоде с их очками
+    vector<int> cards;
+    // Карты от 2 до 10, валет (11), дама (12), король (13), туз (14)
+    // В колоде 4 масти для каждого номинала, всего 52 карты
+    for (int value = 2; value <= 14; value++) {
+        int points = value; // Очки совпадают с номиналом для всех карт
+        for (int i = 0; i < 4; i++) { // 4 масти
+            cards.push_back(points);
+        }
+    }

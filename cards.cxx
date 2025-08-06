@@ -36,3 +36,15 @@ int main() {
             cards.push_back(points);
         }
     }
+
+    vector<int> current;
+    generateCombinations(cards, 0, 6, current, 0);
+
+    // Вычисляем вероятность
+    double probability = static_cast<double>(successfulCombinations) / totalCombinations;
+
+    // Округляем до 6 знаков после запятой
+    cout << fixed << setprecision(6) << probability << endl;
+
+    return 0;
+}

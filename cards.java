@@ -13,3 +13,6 @@ public class CardProbability {
                 cards.add(points);
             }
         }
+
+        int totalCombinations = 0;
+        int successfulCombinations = 0;

@@ -21,4 +21,9 @@ public class CardProbability {
         // Используем рекурсивный подход для генерации комбинаций
         generateCombinations(cards, 0, 6, new ArrayList<>(), 0, totalCombinations, successfulCombinations);
 
-        
+        // Вычисляем вероятность
+        double probability = (double) successfulCombinations / totalCombinations;
+
+        // Округляем до 6 знаков после запятой
+        System.out.printf("%.6f", probability);
+    }

@@ -27,3 +27,22 @@ public class CardProbability {
         // Округляем до 6 знаков после запятой
         System.out.printf("%.6f", probability);
     }
+
+    private static void generateCombinations(List<Integer> cards, int start, int k, 
+                                           List<Integer> current, int currentSum,
+                                           int totalCombinations, int successfulCombinations) {
+        if (k == 0) {
+            totalCombinations++;
+            if (currentSum == 21) {
+                successfulCombinations++;
+            }
+            return;
+        }
+        for (int i = start; i <= cards.size() - k; i++) {
+            current.add(cards.get(i));
+            generateCombinations(cards, i + 1, k - 1, current, currentSum + cards.get(i), 
+                                totalCombinations, successfulCombinations);
+            current.remove(current.size() - 1);
+        }
+    }
+}

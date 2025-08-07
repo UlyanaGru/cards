@@ -16,3 +16,9 @@ public class CardProbability {
 
         int totalCombinations = 0;
         int successfulCombinations = 0;
+
+        // Перебираем все возможные комбинации 6 карт
+        // Используем рекурсивный подход для генерации комбинаций
+        generateCombinations(cards, 0, 6, new ArrayList<>(), 0, totalCombinations, successfulCombinations);
+
+        

@@ -26,6 +26,6 @@
 
 [x] [решение на python](https://github.com/UlyanaGru/cards/blob/master/cards.py)\
 [x] [решение на c++](https://github.com/UlyanaGru/cards/blob/master/cards.cxx)\
-[x] [решение на java](https://github.com/UlyanaGru/cards/blob/master/cards.java)\
+[x] [решение на java](https://github.com/UlyanaGru/cards/blob/master/cards.java)
 
 [itertools](https://docs.python.org/3/library/itertools.html)

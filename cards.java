@@ -31,3 +31,34 @@ public class CardProbability {
         
         long totalCombinations = 0;
         long successfulCombinations = 0;
+        
+        // Перебираем все возможные комбинации 6 карт
+        // Используем 6 вложенных циклов для генерации комбинаций
+        int n = cards.size();
+        for (int i1 = 0; i1 < n; i1++) {
+            for (int i2 = i1 + 1; i2 < n; i2++) {
+                for (int i3 = i2 + 1; i3 < n; i3++) {
+                    for (int i4 = i3 + 1; i4 < n; i4++) {
+                        for (int i5 = i4 + 1; i5 < n; i5++) {
+                            for (int i6 = i5 + 1; i6 < n; i6++) {
+                                totalCombinations++;
+                                // Суммируем очки в комбинации
+                                int sum = cards.get(i1) + cards.get(i2) + cards.get(i3) + 
+                                          cards.get(i4) + cards.get(i5) + cards.get(i6);
+                                if (sum == 21) {
+                                    successfulCombinations++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Вычисляем вероятность
+        double probability = (double) successfulCombinations / totalCombinations;
+        
+        // Выводим результат с округлением до 6 знаков
+        System.out.printf("%.6f%n", probability);
+    }
+}
